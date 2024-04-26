@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        black: ["#000000"],
+        secondary: ["#0c0e13"],
+        primary: ["#5290ed"],
+      },
+      fontFamily: {
+        rubik: ["Rubik", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
