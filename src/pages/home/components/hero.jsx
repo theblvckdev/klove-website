@@ -3,6 +3,7 @@ import BackdropBlur from "../../../components/backdrop_blur";
 import BackdropAbstractLines from "../../../components/backdrop_abstract_lines";
 import Button from "../../../components/global_ui_components/button/button";
 import { IoArrowForward } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
 
         <div className="h-full w-full max-w-6xl mx-auto flex items-center gap-y-5 justify-center flex-col lg:px-0 md:px-5 px-3">
           <div className="w-fit mx-auto p-2 rounded-full px-5 shadow text-sm text-white bg-gray-50 bg-opacity-15 uppercase font-poppins">
-            expertise you can trust
+            boost your productivity today!!
           </div>
 
           <h1 className="text-white lg:text-6xl md:text-4xl text-3xl font-rubik font-bold text-center capitalize">
@@ -32,20 +33,30 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-x-4 items-center">
-            <Button variant={"primary"} body={"Start free trial"} />
-            <Button
-              variant={"transparent"}
-              body={
-                <>
-                  <div className="flex gap-2 items-center">
-                    <div>Learn more</div>
-                    <IoArrowForward />
-                  </div>
-                </>
-              }
-            />
+            <Link to={"/"} className="no-underline outline-none">
+              <Button variant={"primary"} body={"Start free trial"} />
+            </Link>
+
+            <Link to={"/"} className="no-underline outline-none">
+              <Button
+                variant={"transparent"}
+                body={
+                  <>
+                    <div className="flex gap-2 items-center">
+                      <div>Learn more</div>
+                      <IoArrowForward />
+                    </div>
+                  </>
+                }
+              />
+            </Link>
           </div>
         </div>
+
+        {/* scroll down button */}
+        <button className="w-5 h-8 rounded-full ring-1 ring-white absolute bottom-0 left-[50%] -translate-x-[50%] my-5 flex items-center justify-center">
+          <div className="h-1 w-1 bg-white rounded-full animate-bounce"></div>
+        </button>
       </section>
     </>
   );
