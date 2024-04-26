@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         black: ["#000000"],
         secondary: ["#0c0e13"],
-        primary: ["#5290ed"],
+        primary: ["#3067ff"],
       },
       fontFamily: {
         rubik: ["Rubik", "sans-serif"],
